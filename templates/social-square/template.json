@@ -1,0 +1,17 @@
+{
+  "id": "social-square",
+  "name": "Social Square",
+  "description": "Clean 1:1 square format with bold headline and logo.",
+  "aspectRatio": "1:1",
+  "width": 1080,
+  "height": 1080,
+  "duration": 8,
+  "fields": [
+    { "key": "headline", "label": "Headline", "type": "text", "defaultValue": "Your Bold Headline", "maxLength": 60 },
+    { "key": "subheadline", "label": "Subheadline", "type": "text", "defaultValue": "Supporting message goes here", "maxLength": 100 },
+    { "key": "cta", "label": "Call to Action", "type": "text", "defaultValue": "Learn More", "maxLength": 30 },
+    { "key": "bgColor", "label": "Background Color", "type": "color", "defaultValue": "#1a1a2e" },
+    { "key": "accentColor", "label": "Accent Color", "type": "color", "defaultValue": "#e94560" }
+  ],
+  "notes": "Supports optional logo (top-left) and background image (faded overlay)."
+}
