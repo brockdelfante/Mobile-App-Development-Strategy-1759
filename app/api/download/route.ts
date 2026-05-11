@@ -20,7 +20,7 @@ export async function GET(req: NextRequest) {
 
   const buffer = await readFileAsBuffer(render.outputPath)
 
-  return new NextResponse(buffer, {
+  return new NextResponse(new Uint8Array(buffer), {
     headers: {
       'Content-Type': 'video/mp4',
       'Content-Disposition': `attachment; filename="render-${renderId}.mp4"`,
