@@ -1,0 +1,37 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Project {
+  id          String   @id @default(uuid())
+  name        String
+  templateId  String
+  aspectRatio String
+  fields      String   // JSON blob of template text fields
+  logoPath    String?
+  imagePaths  String?  // JSON array of uploaded image paths
+  status      String   @default("draft") // draft | rendering | done | error
+  renderPath  String?
+  errorMsg    String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  renders Render[]
+}
+
+model Render {
+  id         String   @id @default(uuid())
+  projectId  String
+  project    Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  status     String   @default("pending") // pending | running | done | error
+  outputPath String?
+  errorMsg   String?
+  startedAt  DateTime?
+  finishedAt DateTime?
+  createdAt  DateTime @default(now())
+}

@@ -1,0 +1,17 @@
+{
+  "id": "social-landscape",
+  "name": "Social Landscape",
+  "description": "Wide 16:9 landscape format suitable for YouTube and LinkedIn.",
+  "aspectRatio": "16:9",
+  "width": 1920,
+  "height": 1080,
+  "duration": 10,
+  "fields": [
+    { "key": "headline", "label": "Headline", "type": "text", "defaultValue": "Your Main Message", "maxLength": 70 },
+    { "key": "subheadline", "label": "Subheadline", "type": "text", "defaultValue": "A compelling supporting statement", "maxLength": 120 },
+    { "key": "author", "label": "Author / Brand Name", "type": "text", "defaultValue": "Your Brand", "maxLength": 40 },
+    { "key": "bgColor", "label": "Background Color", "type": "color", "defaultValue": "#16213e" },
+    { "key": "accentColor", "label": "Accent Color", "type": "color", "defaultValue": "#0f3460" }
+  ],
+  "notes": "Supports optional logo (left panel) and background image (right panel)."
+}

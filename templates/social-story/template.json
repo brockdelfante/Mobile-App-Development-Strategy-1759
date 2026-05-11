@@ -1,0 +1,17 @@
+{
+  "id": "social-story",
+  "name": "Social Story",
+  "description": "Vertical 9:16 story format with animated text reveal.",
+  "aspectRatio": "9:16",
+  "width": 1080,
+  "height": 1920,
+  "duration": 10,
+  "fields": [
+    { "key": "headline", "label": "Headline", "type": "text", "defaultValue": "Big Announcement", "maxLength": 40 },
+    { "key": "body", "label": "Body Text", "type": "textarea", "defaultValue": "Share your story with the world. Keep it short and impactful.", "maxLength": 150 },
+    { "key": "cta", "label": "Call to Action", "type": "text", "defaultValue": "Swipe Up", "maxLength": 25 },
+    { "key": "bgColor", "label": "Background Color", "type": "color", "defaultValue": "#0f3460" },
+    { "key": "accentColor", "label": "Accent Color", "type": "color", "defaultValue": "#e94560" }
+  ],
+  "notes": "Supports optional logo (centered top) and background image (faded overlay)."
+}
